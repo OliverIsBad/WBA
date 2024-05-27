@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="StudBoard - Eine Plattform für spannende Projekte">
+    <meta name="keywords" content="StudBoard, Projekte, Studierende">
+    <meta name="author" content="Oliver Mann, Kevin Zuber">
+    <title>StudBoard - Projekt 1</title>
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="projekt.css">
+</head>
+<body>
+    <header>
+        <picture>
+            <source media="(min-width: 1920px)" srcset="../../images/header1920x200.png">
+            <source media="(min-width: 1280px)" srcset="../../images/header1280x133.png">
+            <source media="(min-width: 640px)" srcset="../../images/header640x67.png">
+            <img src="../../images/header320x34.png" alt="StudBoard Header">
+        </picture>
+        <form action="../Blanko/blanko.html" method="GET" class="login-form">
+            <label for="username">Benutzername:</label>
+            <input type="text" id="username" name="username">
+            <label for="password">Passwort:</label>
+            <input type="password" id="password" name="password">
+            <button type="submit">Login</button>
+        </form>
+    </header>
+
+    <nav class="main-nav">
+        <a href="../Startseite/index.html"><img src="../../images/startseite.svg" alt="Startseite" class="start-page-img"></a>
+        <a href="../Projekte/projekte.html">Projekte</a>
+        <a href="../NeuesProjekt/neuesProjekt.html">Neues Projekt</a>
+    </nav>
+    
+    <header class="project-header">
+        <img src="../../images/projektlogo1.png" alt="Projektlogo" class="projektlogo">
+        <h1 class="project-title">Projekt 1</h1>
+        <h1 id="projektleiter" class="project-manager">Projektleiter: Max Mustermann</h1>
+    </header>
+
+    <main class="main-content">
+        <section class="content">
+            <h3 id="kurzbeschreibung">Kurzbeschreibung</h3>
+            <p>Dies ist eine kurze Beschreibung des Projekts.</p>
+            <h3 id="langbeschreibung">Langbeschreibung</h3>
+            <p>Dies ist eine ausführliche Beschreibung des Projekts.</p>
+            <h3 id="ziele">Projektziele</h3>
+            <ol>
+                <li>Ziel 1</li>
+                <li>Ziel 2</li>
+            </ol>
+            <form action="../Blanko/blanko.html" method="POST" enctype="TRANSFERFORMAT">
+                <label for="comment">Kommentar:</label><br><br>
+                <textarea id="comment" name="comment"></textarea><br><br>
+                <label for="rating">Bewertung (1-5):</label><br><br>
+                <input type="number" id="rating" name="rating" min="1" max="5"><br><br>
+                <button type="submit">Absenden</button><br><br><br><br>
+            </form>
+        </section>
+        <section>
+            <nav class="content-nav">
+                <h2>Inhalts-Menü</h2>
+                    <a href="#kurzbeschreibung">Kurzbeschreibung</a>
+                    <a href="#langbeschreibung">Langbeschreibung</a>
+                    <a href="#ziele">Projektziele</a>
+            </nav>
+        </section> 
+    </main>
+    
+    <footer class="main-footer">
+        <a href="../Blanko/blanko.html">Neu Registrieren</a><br><br>
+        <nav>
+            <a href="../Blanko/blanko.html">Impressum</a><br>
+            <a href="../Blanko/blanko.html">Datenschutzerklärung</a><br>
+            <a href="../Blanko/blanko.html">Haftungsausschluss</a><br>
+        </nav>
+        <p>&copy; 2024 StudBoard. Alle Rechte vorbehalten.</p>
+        <a class="back-to-start-link" href="#">Zurück zum Seitenanfang</a>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,74 @@
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.content {
+    flex: 1;
+    margin-right: 20px;
+    background-color: #f0f0f0; /* Hellerer Hintergrund */
+    padding: 5px; /* 5px Abstand zum Rahmen */
+    margin-bottom: 20px;
+}
+
+.content-nav {
+    background-color: black;
+    width: 200px;
+    border-left: 15px solid #0d22e2; /* Vertikaler farbiger Balken */
+}
+
+.content-nav h2 {
+    color: white;
+    text-align: center;
+}
+
+.content-nav a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+
+.content-nav a:hover {
+    background-color: #87CEFA;
+}
+
+textarea {
+    border: 2px solid #000;
+    background-color: #f0f0f0;
+}
+
+textarea:focus {
+    background-color: white;
+    outline: none;
+}
+
+.project-header {
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    background-color: #1B1C1D;
+    color: white;
+    z-index: 1000;
+    padding: 10px;
+}
+
+.project-header .projektlogo {
+    height: 150px;
+    width: auto;
+}
+
+.project-header .project-title {
+    margin-left: 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2em;
+}
+
+.project-header .project-manager {
+    margin-left: auto; /* rechtsbündig */
+    background-color: #1B1C1D;
+    color: white;
+    padding: 5px;    
+}

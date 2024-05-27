@@ -1,0 +1,100 @@
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.content {
+    flex: 1;
+    margin-right: 20px;
+    background-color: #f0f0f0; /* Hellerer Hintergrund */
+    margin-bottom: 20px;
+}
+
+.content-nav {
+    background-color: black;
+    width: 200px;
+    border-left: 15px solid #0d22e2; /* Vertikaler farbiger Balken */
+}
+
+.content-nav h2 {
+    color: white;
+    text-align: center;
+}
+
+.content-nav a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+.content-nav a:hover {
+    background-color: #87CEFA;
+}
+
+textarea, input[type="text"], input[type="date"] {
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+textarea:focus, input[type="text"]:focus, input[type="date"]:focus {
+    background-color: white;
+    outline: none;
+}
+
+textarea#kurzbeschreibung,
+textarea#langbeschreibung {
+    width: 100%;
+}
+
+input[type="text"], input[type="date"] {
+    width: 40%;
+}
+
+.project-header {
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    background-color: #1B1C1D;
+    color: white;
+    z-index: 1000;
+    padding: 10px;
+}
+
+.project-header .projektlogo {
+    height: 150px;
+    width: auto;
+    background-color: #ccc;
+    border: 2px dashed #aaa;
+    text-align: center;
+    line-height: 150px;
+}
+
+.project-header .project-title {
+    margin-left: 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2em;
+}
+
+.project-header .project-manager {
+    margin-left: auto;
+    background-color: #1B1C1D;
+    color: white;
+    padding: 5px;
+}
+
+.projekt-erstellen-button {
+    padding: 10px 20px;
+    background-color: #1B1C1D;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.projekt-erstellen-button:hover {
+    background-color: #333;
+}

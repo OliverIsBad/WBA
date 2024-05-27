@@ -1,0 +1,48 @@
+.project-header {
+    background-color: #1B1C1D;
+    color: white;
+    font-size: 1.5em;
+}
+
+.project-footer {
+    background-color: #1B1C1D;
+    height: auto; /* Höhe dynamisch an den Inhalt anpassen */
+    margin-bottom: 20px;
+}
+
+.project-footer:hover {
+    text-decoration: underline;
+}
+
+.inhalts-menu ul li a {
+    color: black;
+}
+
+main section p {
+    padding: 5px;
+}
+
+.sort-label {
+    font-size: 1.2em;
+    margin-right: 10px;
+    color: #1B1C1D;
+}
+
+.sort-dropdown {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #1B1C1D;
+    border-radius: 5px;
+    background-color: white;
+    color: #1B1C1D;
+    margin-bottom: 20px;
+}
+
+.sort-dropdown:focus {
+    outline: none;
+    border-color: #1B1C1D;
+}
+
+.sort-dropdown option {
+    font-size: 1em;
+}
