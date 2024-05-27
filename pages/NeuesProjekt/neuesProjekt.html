@@ -34,7 +34,10 @@
     </nav>
     
     <header class="project-header">
-        <div class="projektlogo logo-placeholder">Logodatei auswählen</div>
+        <div class="projektlogo logo-placeholder">
+            <label for="logo-upload" class="logo-label">Logodatei auswählen</label>
+            <input type="file" id="logo-upload" name="logo-upload" style="display: none;">
+        </div>
         <h1 class="project-title"><input type="text" id="titel" name="titel" placeholder="Projekttitel"></h1>
         <h1 id="projektleiter" class="project-manager">Projektleiter: <input type="text" id="projektleiter-name" name="projektleiter" placeholder="Projektleiter"></h1>
     </header>
