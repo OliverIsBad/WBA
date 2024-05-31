@@ -4,12 +4,13 @@ const ProjectTaskArea = require('./ProjectTaskArea.js');
 const Artefact = require('./Artefact.js');
 const ProjectArtefact = require('./ProjectArtefact.js');
 const TaskArea = require('./TaskArea.js');
+const Sort = require('./Sort.js');
 
 
 // Beispielprojekte mit je zwei Artefakten
 let project1 = new Project("Projekt A", "Beschreibung A", "pfad/logoA.png", "2024-01-01");
-let project2 = new Project("Projekt B", "Beschreibung B", "pfad/logoB.png", "2024-02-01");
-let project3 = new Project("Projekt C", "Beschreibung C", "pfad/logoC.png", "2024-03-01");
+let project2 = new Project("Projekt B", "Beschreibung B", "pfad/logoB.png", "2024-03-01");
+let project3 = new Project("Projekt C", "Beschreibung C", "pfad/logoC.png", "2024-02-01");
 
 let taskArea1 = new TaskArea("Aufgabenbereich 1", "Beschreibung 1");
 let taskArea2 = new TaskArea("Aufgabenbereich 2", "Beschreibung 2");
@@ -26,6 +27,9 @@ let projectArtefact1 = new ProjectArtefact(1, 1, 8);
 let projectArtefact2 = new ProjectArtefact(1, 2, 15);
 let projectArtefact3 = new ProjectArtefact(2, 3, 25);
 let projectArtefact4 = new ProjectArtefact(2, 4, 35);
+
+let sort = new Sort();
+let projects = [project1, project2, project3];
 
 console.log(project1, project2, project3);
 console.log(taskArea1, taskArea2);
@@ -44,3 +48,7 @@ console.log("");
 console.log(project2);
 console.log("");
 console.log("Projektlaufzeit für Projekt 2:", project2.calculateProjectRuntime(), "Stunden");
+
+let sortedProjects = sort.sortDate(projects.map(project => project.startDate));
+console.log(sortedProjects);
+
