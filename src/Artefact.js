@@ -1,9 +1,9 @@
 class Artefact {
     constructor(title, shortDescription, taskAreaId, plannedWorkingTime) {
-        this.titel = title;
-        this.kurzbeschreibung = this.setMaxLength(shortDescription, 255);
-        this.aufgabenbereichId = taskAreaId;
-        this.geplanteArbeitszeit = plannedWorkingTime;
+        this.title = title;
+        this.shortDescription = this.setMaxLength(shortDescription, 255);
+        this.taskAreaId = taskAreaId;
+        this.planedWorkingTime = plannedWorkingTime;
     }
 
     setMaxLength(text, maxLength) {

@@ -52,3 +52,5 @@ console.log("Projektlaufzeit für Projekt 2:", project2.calculateProjectRuntime(
 let sortedProjects = sort.sortDate(projects.map(project => project.startDate));
 console.log(sortedProjects);
 
+let sortedProjectsByTime = sort.sortRunTime(projects.map(project => project.calculateProjectRuntime()));
+console.log(sortedProjectsByTime);
