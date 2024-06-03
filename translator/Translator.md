@@ -25,7 +25,7 @@ function applyTranslations() {
 loadLanguage('de'); // Beispiel: Deutsch
 ```
 
-## Sprachdateien (languages/)
+## Sprachdateien (languages)
 
 Jede Sprachdatei enthält ein Dictionary (alternativ auch eine Map) mit allen benötigten Übersetzungen. Die Dateien sind nach Sprachcode benannt, z.B. `de.js` für Deutsch, `en.js` für Englisch.
 

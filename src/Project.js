@@ -9,7 +9,12 @@ class Project {
     }
     
     setMaxLength(text, maxLength) {
-        return text.length > maxLength ? text.substring(0, maxLength) : text;
+        if (text.length > maxLength) {
+            // Wenn der Text länger als maxLength ist, wird er auf maxLength gekürzt
+            return text.substring(0, maxLength);
+        } else {
+            return text;
+        }
     }
 
     addArtefact(artefact) {
@@ -17,6 +22,7 @@ class Project {
     }
 
     calculateProjectRuntime() {
+        // Summiere die geplanten Arbeitszeiten aller Artefakte
         return this.artefacts.reduce((sum, artefact) => sum + artefact.planedWorkingTime, 0);
     }
 }

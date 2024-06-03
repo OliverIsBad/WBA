@@ -5,7 +5,12 @@ class TaskArea {
     }
 
     setMaxLength(text, maxLength) {
-        return text.length > maxLength ? text.substring(0, maxLength) : text;
+        if (text.length > maxLength) {
+            // Wenn der Text länger als maxLength ist, wird er auf maxLength gekürzt
+            return text.substring(0, maxLength);
+        } else {
+            return text;
+        }
     }
 }
 module.exports = TaskArea;

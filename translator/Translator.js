@@ -11,7 +11,7 @@ class Translator {
                 ["project", "Project"],
                 ["menu", "Menu"],
                 ["shortDescription", "Short Description"],
-                // More translations...
+                // Weitere Übersetzungen...
             ])]
         ]);
     }
