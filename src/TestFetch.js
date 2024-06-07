@@ -19,6 +19,12 @@ fetchPromises.push(fetchData('https://scl.fh-bielefeld.de/WBA/tasks.json'));
 fetchPromises.push(fetchData('https://scl.fh-bielefeld.de/WBA/artefacts.json'));
 
 // Warte auf alle Fetch-Operationen
+
+/*
+Promise:
+- Ein Promise ist ein Objekt, das einen asynchronen Vorgang repräsentiert.
+- Ein Promise ist ein Platzhalter für einen Wert, der möglicherweise in der Zukunft verfügbar ist. 
+*/
 Promise.all(fetchPromises)
     .then(printArrays)
     .catch(error => {
