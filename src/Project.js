@@ -1,16 +1,19 @@
 class Project {
-    
-    constructor(title, shortDescription, pathProjectLogo, startDate) {
-        this.title = title;
-        this.shortDescription = this.setMaxLength(shortDescription, 255);
-        this.pathProjectLogo = pathProjectLogo;
-        this.startDate = new Date(startDate);
+    constructor(id, name, shortdesc, longdesc, logourl, maintainer, start, end) {
+        this.id = id;
+        this.name = name;
+        this.shortdesc = shortdesc ? this.setMaxLength(shortdesc, 255) : '';
+        this.longdesc = longdesc ? this.setMaxLength(longdesc, 255) : '';
+        this.logourl = logourl;
+        this.maintainer = maintainer;
+        this.start = new Date(start);
+        this.end = new Date(end);
         this.artefacts = [];
     }
-    
+
     setMaxLength(text, maxLength) {
         if (text.length > maxLength) {
-            // Wenn der Text länger als maxLength ist, wird er auf maxLength gekürzt
+            // If the text is longer than maxLength, truncate it
             return text.substring(0, maxLength);
         } else {
             return text;
@@ -22,8 +25,9 @@ class Project {
     }
 
     calculateProjectRuntime() {
-        // Summiere die geplanten Arbeitszeiten aller Artefakte
+        // Sum up the planned working times of all artefacts
         return this.artefacts.reduce((sum, artefact) => sum + artefact.planedWorkingTime, 0);
     }
 }
+
 module.exports = Project;

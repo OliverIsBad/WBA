@@ -5,7 +5,7 @@ const Artefact = require('./Artefact.js');
 const ProjectArtefact = require('./ProjectArtefact.js');
 const TaskArea = require('./TaskArea.js');
 const Sort = require('./Sort.js');
-const Translator = require('../translator/Translator.js');
+const Translator = require('./translator/Translator.js');
 
 
 
@@ -59,4 +59,3 @@ console.log(sortedProjects);
 
 let sortedProjectsByTime = sort.sortRunTime(projects.map(project => project.calculateProjectRuntime()));
 console.log(sortedProjectsByTime);
-
