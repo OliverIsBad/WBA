@@ -1,11 +1,11 @@
 class Artefact {
-    constructor(id, name, shortdesc, longdesc, plannedtime, realtime, taskid) {
+    constructor(id, name, shortdesc, longdesc, planedtime, realtime, taskid) {
         this.id = id;
         this.name = name;
         this.shortdesc = this.setMaxLength(shortdesc, 255);
         this.longdesc = longdesc;
-        this.plannedtime = this.convertTimeToMinutes(plannedtime);
-        this.realtime = this.convertTimeToMinutes(realtime);
+        this.planedtime = planedtime;//this.convertTimeToMinutes(plannedtime);
+        this.realtime = realtime;//this.convertTimeToMinutes(realtime);
         this.taskid = taskid;
     }
 

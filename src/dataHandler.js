@@ -1,9 +1,7 @@
-const apiUrl = 'https://scl.fh-bielefeld.de/WBA/projectsAPI';
+const apiUrl = 'https://cors-anywhere.herokuapp.com/https://scl.fh-bielefeld.de/WBA/projectsAPI';
 
-// Funktion zum Speichern von Daten (simuliert das Speichern durch das Hinzufügen von Daten zu bestehenden JSON-Dateien)
 async function saveData(data) {
     try {
-        // Senden einer POST-Anfrage an die API
         let response = await fetch(apiUrl, {
             method: 'POST',
             headers: {
@@ -12,27 +10,18 @@ async function saveData(data) {
             body: JSON.stringify(data)
         });
 
-        // Wenn die API-Endpoint nicht gefunden wird (404), wird ein Fehler ausgelöst
-        if (response.status === 404) {
-            throw new Error('API-Endpunkt nicht gefunden');
-        }
-
-        // Wenn die Antwort nicht erfolgreich ist, wird ein Fehler ausgelöst
         if (!response.ok) {
             throw new Error('Fehler beim Speichern der Daten');
         }
 
-        // Umwandeln der Antwort in JSON-Format
         let result = await response.json();
+        console.log('Daten erfolgreich gesendet:', result);
         return result;
-
     } catch (error) {
-        // Bei einem Fehler wird die saveToLocal-Funktion aufgerufen, um die Daten lokal zu speichern
         console.error('Fehler:', error);
         saveToLocal(data);
     }
 }
-
 // Funktion zum Speichern von Daten in localStorage
 function saveToLocal(data) {
     // Abrufen der bereits in localStorage gespeicherten Daten oder Initialisierung als leeres Array
@@ -96,3 +85,10 @@ saveData(newArtifact);
 
 // Initialisierung der Wiederholungslogik beim Laden der Seite
 window.onload = init;
+
+// Export der Funktionen für Tests
+module.exports = {
+    saveData,
+    saveToLocal,
+    retryLocalData
+};

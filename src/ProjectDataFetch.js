@@ -36,7 +36,7 @@ function processFetchedData(data) {
                     projects.push(project);
                 } else if (item.hasOwnProperty('name') && item.hasOwnProperty('shortdesc') && item.hasOwnProperty('taskid')) {
                     // Artefakt
-                    const artefact = new Artefact(item.id, item.name, item.shortdesc, item.longdesc, item.plannedtime, item.realtime, item.taskid);
+                    const artefact = new Artefact(item.id, item.name, item.shortdesc, item.longdesc, item.planedtime, item.realtime, item.taskid);
                     artefacts.push(artefact);
                 } else if (item.hasOwnProperty('name') && item.hasOwnProperty('shortdesc') && item.hasOwnProperty('project')) {
                     // Task
